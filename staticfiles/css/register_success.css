@@ -1,0 +1,29 @@
+.success-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+.success-title {
+    color: #0066cc;
+}
+
+.text-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 600px) {
+    .success-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+}
