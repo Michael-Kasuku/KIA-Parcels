@@ -1,0 +1,101 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* List styling */
+.list-group-item {
+    font-size: 18px;
+    color: #555;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* No data available message styling */
+.text-muted {
+    font-style: italic;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 20px;
+    }
+
+    .list-group-item {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/* Table styling */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+}

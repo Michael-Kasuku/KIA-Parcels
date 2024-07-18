@@ -1,0 +1,38 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+<div class="about-us-container">
+    <div class="about-us-header">
+        <h2>About Us</h2>
+        <p class="text-muted">KIA Parcels is a parcel management platform developed in July 2024 for Kisumu International Airport by Kasuku Tech Junction, a technology company founded by Michael Otieno Kasuku in December 2023.</p>
+    </div>
+    
+    <div class="mission-vision-section">
+        <div class="mission-section">
+            <h3><i class="bi bi-binoculars"></i> Our Mission</h3>
+            <p>Our mission is to provide efficient, reliable, and user-friendly parcel management solutions to ensure the seamless handling and tracking of parcels at Kisumu International Airport.</p>
+        </div>
+        
+        <div class="vision-section">
+            <h3><i class="bi bi-award"></i> Our Vision</h3>
+            <p>We envision becoming the leading provider of innovative technology solutions in the aviation industry, enhancing the overall efficiency and customer experience at airports.</p>
+        </div>
+    </div>
+    
+    <div class="features-section">
+        <h3><i class="bi bi-check2-square"></i> Our Features</h3>
+        <ul>
+            <li><strong>Send Parcel:</strong> Easily send parcels with our streamlined process.</li>
+            <li><strong>Sent Parcels:</strong> Track and manage parcels you have sent.</li>
+            <li><strong>Received Parcels:</strong> View and manage parcels you have received.</li>
+            <li><strong>Help:</strong> Access our <a href="{% url 'contact_us' %}">Contact Us</a>, <a href="{% url 'about_us' %}">About Us</a>, and <a href="{% url 'faqs' %}">FAQs</a> sections for support and information.</li>
+        </ul>
+    </div>
+    
+    <div class="contact-section">
+        <h3><i class="bi bi-telephone-fill"></i> Contact Us</h3>
+        <p>If you have any questions or need assistance, please feel free to reach out to us through our <a href="{% url 'contact_us' %}">Contact Us</a> page.</p>
+    </div>
+</div>
+{% endblock %}

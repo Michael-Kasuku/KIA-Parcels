@@ -1,0 +1,54 @@
+{% extends 'base_authentication.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+<div class="container">
+    <div class="login-form">
+        <h2 class="form-title">KIA Parcels</h2>
+        <form method="post" action="{% url 'login' %}" id="login-form">
+            {% csrf_token %}
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                {% for field, error_list in form.errors.items %}
+                    {% for error in error_list %}
+                        {{ error }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div class="form-group">
+                <label for="id_email_address" class="form-label">Email Address</label>
+                {{ form.email_address }}
+                <span id="email-error" class="error-message">{{ form.errors.email_address }}</span>
+            </div>
+            <div class="form-group">
+                <label for="id_password" class="form-label">Password</label>
+                {{ form.password }}
+                <span id="password-error" class="error-message">{{ form.errors.password }}</span>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="show-password-checkbox">
+                <label class="form-check-label" for="show-password-checkbox">Show Password</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="{% url 'register' %}" class="text-link">Register</a></p>
+            <p><a href="{% url 'password_reset' %}" class="text-link">Forgot your password?</a></p>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('show-password-checkbox').addEventListener('change', function () {
+        var passwordField = document.getElementById('id_password');
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    });
+</script>
+{% endblock %}

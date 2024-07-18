@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kiaparcels</title>
+    <link rel="stylesheet" href="{% static 'css/base_dashboard.css' %}">
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Sidebar Section -->
+<aside class="sidebar">
+    <div class="logo">
+        <img src="{% static 'img/logo.jfif' %}" alt="Parcel">
+    </div>
+    <nav class="navigation" role="navigation" aria-label="Main Navigation">
+        <a href="{% url 'dashboard' %}" class="nav-item"><i class="bi bi-house-door icon-home"></i> Home</a>
+        <a href="{% url 'send_parcel' %}" class="nav-item"><i class="bi bi-send icon-send"></i> Send</a>
+        
+        <!-- Sent Parcels Dropdown -->
+        <a class="nav-item" data-bs-toggle="collapse" href="#sentCollapse" role="button" aria-expanded="false" aria-controls="sentCollapse">
+            <i class="bi bi-box-seam icon-sent"></i> Sent
+        </a>
+        <div class="collapse" id="sentCollapse">
+            <a href="{% url 'sent_parcels' %}" class="nav-item collapse-item"><i class="bi bi-eye icon-view-sent"></i> View Sent Parcels</a>
+        </div>
+        
+        <!-- Received Parcels Dropdown -->
+        <a class="nav-item" data-bs-toggle="collapse" href="#receivedCollapse" role="button" aria-expanded="false" aria-controls="receivedCollapse">
+            <i class="bi bi-inbox icon-received"></i> Received
+        </a>
+        <div class="collapse" id="receivedCollapse">
+            <a href="{% url 'received_parcels' %}" class="nav-item collapse-item"><i class="bi bi-eye icon-view-received"></i> View Received Parcels</a>
+        </div>
+        
+        <a href="{% url 'about_us' %}" class="nav-item"><i class="bi bi-info-circle icon-about"></i> About Us</a>
+        <a href="{% url 'contact_us' %}" class="nav-item"><i class="bi bi-envelope icon-contact"></i> Contact Us</a>
+        <a href="{% url 'faqs' %}" class="nav-item"><i class="bi bi-question-circle icon-faq"></i> FAQs</a>
+        <a href="{% url 'logout' %}" class="nav-item"><i class="bi bi-box-arrow-right icon-logout"></i> Logout</a>
+    </nav>
+</aside>
+<!-- Main Content Section -->
+<main class="main-content">
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+</main>
+<!-- Bootstrap JS and dependencies (Popper.js, etc.) -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="{% static 'css/bootstrap.min.js' %}"></script>
+</body>
+</html>

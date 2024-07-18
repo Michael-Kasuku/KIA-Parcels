@@ -1,0 +1,59 @@
+/* faqs.css */
+
+/* Container styling */
+.faqs-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Accordion styling */
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: #f0f0f0;
+}
+
+.accordion-title h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #007bff;
+}
+
+.icon {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Hide content by default */
+.accordion-content {
+    padding: 15px;
+    display: none;
+}
+
+/* Show content when accordion is active */
+.active .accordion-content {
+    display: block;
+}

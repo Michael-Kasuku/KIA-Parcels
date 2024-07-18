@@ -1,0 +1,123 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-us-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.contact-us-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-us-header h2 {
+    font-size: 36px;
+    color: #007bff; /* Blue color for headings */
+}
+
+.text-muted {
+    color: #666; /* Lighter gray for regular text */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.email-section, .phone-section, .address-section {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-section h3, .phone-section h3, .address-section h3 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+.email-section p, .phone-section p, .address-section p {
+    font-size: 18px;
+    color: #555; /* Dark gray text */
+    line-height: 1.6;
+}
+
+.contact-form-section {
+    margin-top: 30px;
+}
+
+.contact-form-section h3 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,48 @@
+/* recieved_parcels.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.parcel-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.parcel-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.parcel-card:hover {
+    transform: translateY(-5px);
+}
+
+.parcel-details {
+    padding: 20px;
+}
+
+.parcel-details h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.no-parcels {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}

@@ -1,0 +1,103 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.about-us-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-us-header h2 {
+    font-size: 36px;
+    color: #007bff; /* Blue color for headings */
+}
+
+.text-muted {
+    color: #666; /* Lighter gray for regular text */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.mission-vision-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.mission-section, .vision-section {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-section h3, .vision-section h3 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+.features-section {
+    margin-bottom: 30px;
+}
+
+.features-section h3 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+.features-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features-section ul li {
+    font-size: 18px;
+    color: #555; /* Dark gray text */
+    margin-bottom: 10px;
+}
+
+.contact-section h3 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #555; /* Dark gray text */
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

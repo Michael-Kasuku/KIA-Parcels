@@ -1,0 +1,163 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<div class="container-fluid">
+    <h2 class="text-center bg-white py-3 mb-4 shadow-sm">KIA Parcels</h2>
+    <div class="row g-3">
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <h3>Airports</h3>
+                </div>
+                <div class="card-body">
+                    {% if airports %}
+                        <ul class="list-group list-group-flush">
+                            {% for airport in airports %}
+                                <li class="list-group-item">{{ airport.airport_name }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted text-center">No airports available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-success text-white">
+                    <h3>Airlines</h3>
+                </div>
+                <div class="card-body">
+                    {% if airlines %}
+                        <ul class="list-group list-group-flush">
+                            {% for airline in airlines %}
+                                <li class="list-group-item">{{ airline.airline_name }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted text-center">No airlines available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-warning text-white">
+                    <h3>Aircrafts</h3>
+                </div>
+                <div class="card-body">
+                    {% if aircrafts %}
+                        <ul class="list-group list-group-flush">
+                            {% for aircraft in aircrafts %}
+                                <li class="list-group-item">{{ aircraft.aircraft_name }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted text-center">No aircrafts available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-info text-white">
+                    <h3>Future Flights</h3>
+                </div>
+                <div class="card-body">
+                    {% if future_flights %}
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Airline</th>
+                                    <th scope="col">Aircraft</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Departure Time</th>
+                                    <th scope="col">Arrival Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for flight in future_flights %}
+                                    <tr>
+                                        <td>{{ flight.airline_id.airline_name }}</td>
+                                        <td>{{ flight.aircraft_id.aircraft_name }}</td>
+                                        <td>{{ flight.destination.airport_name }}</td>
+                                        <td>{{ flight.departure_time|date:"Y-m-d H:i" }}</td>
+                                        <td>{{ flight.arrival_time|date:"Y-m-d H:i" }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="text-muted text-center">No future flights available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-danger text-white">
+                    <h3>Past Flights</h3>
+                </div>
+                <div class="card-body">
+                    {% if past_flights %}
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Airline</th>
+                                    <th scope="col">Aircraft</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Departure Time</th>
+                                    <th scope="col">Arrival Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for flight in past_flights %}
+                                    <tr>
+                                        <td>{{ flight.airline_id.airline_name }}</td>
+                                        <td>{{ flight.aircraft_id.aircraft_name }}</td>
+                                        <td>{{ flight.destination.airport_name }}</td>
+                                        <td>{{ flight.departure_time|date:"Y-m-d H:i" }}</td>
+                                        <td>{{ flight.arrival_time|date:"Y-m-d H:i" }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="text-muted text-center">No past flights available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-secondary text-white">
+                    <h3>Parcel Transit Cost</h3>
+                </div>
+                <div class="card-body">
+                    {% if parcel_transit_cost %}
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mass Range</th>
+                                    <th scope="col">Cost (Ksh.)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fee in parcel_transit_cost %}
+                                    <tr>
+                                        <td>{{ fee.mass_range }}</td>
+                                        <td>{{ fee.parcel_transit_cost }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="text-muted text-center">No parcel transit cost available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

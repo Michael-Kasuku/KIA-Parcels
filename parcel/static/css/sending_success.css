@@ -1,0 +1,34 @@
+/* styles.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-message {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-message h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn-print {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-print:hover {
+    background-color: #0056b3;
+}

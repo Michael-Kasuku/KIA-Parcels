@@ -1,0 +1,146 @@
+/* Reset Default Styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Set the width of the sidebar */
+    height: 100%; /* Occupy full height */
+    position: fixed; /* Fix the sidebar position */
+    top: 0; /* Place it at the top */
+    left: 0; /* Place it on the left */
+    background-color: #343a40; /* Dark background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+
+/* Logo Styles */
+.logo img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+/* Navigation Item Styles */
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    color: #343a40; /* Dark text color on hover */
+    background-color: #ffffff; /* White background on hover */
+}
+
+.nav-item i {
+    margin-right: 10px;
+}
+
+/* Nested Navigation Item Styles */
+.collapse-item {
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #adb5bd; /* Light gray text color */
+}
+
+.collapse-item:hover {
+    color: #343a40; /* Dark text color on hover */
+}
+
+/* Icon Colors */
+.icon-home {
+    color: #ff6347; /* Tomato */
+}
+
+.icon-send {
+    color: #4682b4; /* Steel Blue */
+}
+
+.icon-sent {
+    color: #32cd32; /* Lime Green */
+}
+
+.icon-view-sent {
+    color: #ff4500; /* Orange Red */
+}
+
+.icon-track-sent {
+    color: #8a2be2; /* Blue Violet */
+}
+
+.icon-received {
+    color: #ffd700; /* Gold */
+}
+
+.icon-view-received {
+    color: #daa520; /* Golden Rod */
+}
+
+.icon-track-received {
+    color: #cd5c5c; /* Indian Red */
+}
+
+.icon-about {
+    color: #1e90ff; /* Dodger Blue */
+}
+
+.icon-contact {
+    color: #ffa07a; /* Light Salmon */
+}
+
+.icon-faq {
+    color: #20b2aa; /* Light Sea Green */
+}
+
+.icon-logout {
+    color: #ff0000; /* Red */
+}
+
+/* Main Content Section Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    height: 100%;
+}

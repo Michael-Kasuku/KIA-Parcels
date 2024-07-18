@@ -1,0 +1,49 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/recieved_parcels.css' %}">
+<div class="container-fluid mt-5">
+    <h2 class="text-center bg-white py-3 mb-4 shadow-sm">Received Parcels</h2>
+    {% if recieved_parcels %}
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-success text-white">
+                <h3>Received Parcels</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sent By</th>
+                            <th scope="col">Parcel Description</th>
+                            <th scope="col">Receipt Number</th>
+                            <th scope="col">Shipment Fee (Ksh.)</th>
+                            <th scope="col">Sent on</th>
+                            <th scope="col">Sent via</th>
+                            <th scope="col">Delivered</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for parcel in recieved_parcels %}
+                            <tr>
+                                <td>{{ parcel.sender }}</td>
+                                <td>{{ parcel.parcel_description }}</td>
+                                <td>{{ parcel.reciept_number }}</td>
+                                <td>{{ parcel.fee_id.parcel_transit_cost }}</td>
+                                <td>{{ parcel.submitted_at }}</td>
+                                <td>{{ parcel.flight_id }}</td>
+                                <td>{{ parcel.delivery_status }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% else %}
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <p class="text-muted">No received parcels available.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

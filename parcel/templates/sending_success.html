@@ -1,0 +1,13 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/sending_success.css' %}">
+<div class="container mt-5">
+    <div class="alert alert-success text-center">
+        <h2 class="alert-heading">Parcel Sent Successfully!</h2>
+        <p>Your receipt number is: <strong>{{ reciept_number }}</strong></p>
+        <hr>
+        <button onclick="window.print()" class="btn btn-primary mt-3">Print Receipt</button>
+    </div>
+</div>
+{% endblock %}
